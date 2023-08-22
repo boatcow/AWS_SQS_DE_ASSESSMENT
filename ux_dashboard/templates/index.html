@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar UX</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="stylesheet" href='/static/css/styles.css' />
+
+</head>
+<body>
+    <div class="navbar">
+        <button id="load-events-btn">Load Events to Database</button>
+        <button id="view-records-btn">View Records</button>
+    </div>
+    <p id="load-event-status"></p>
+
+    <div class="content">
+        <div class="load-events-section">
+            <label for="number-of-events">Number of Events to be Processed:</label>
+            <input type="number" id="number-of-events">
+            <button onclick="sendEventCount()">Submit</button>
+            <p id="load-event-status"></p>
+        </div>
+        <p id="load-event-status"></p>
+
+        <div class="view-records-section">
+            <!-- <h1>Records</h1> -->
+            <button id="view-other-data-btn">View UnMasked Data</button>
+            <table>
+                <thead>
+                    <!-- Assuming your data structure, but you can modify column names as needed -->
+                    <tr>
+                        <th>ID</th>
+                        <th>Platform</th>
+                        <th id="ip-mask">IP (Masked)</th>
+                        <th id="info-mask">Info (Masked)</th>
+                        <th>Country</th>
+                        <th>Version</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="records-table">
+                    <!-- Data will be filled here by the JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
