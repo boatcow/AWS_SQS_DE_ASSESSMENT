@@ -9,8 +9,10 @@ from main.etl_main import ETL
 app = Flask(__name__)
 
 
-
 def get_db_connection():
+    '''
+    Function to get a connection to the PostgreSQL database using provided configuration
+    '''
     return psycopg2.connect(
             dbname=db_configuration["POSTGRES_DATABASE"],
             user=db_configuration["POSTGRES_USER_NAME"],
@@ -21,6 +23,9 @@ def get_db_connection():
 
 @app.route('/load-events', methods=['POST'])
 def load_events():
+    '''
+    Endpoint to load events into the system
+    '''
     number_of_events = request.json.get('number_of_events')
     etl = ETL(sqs_configuration= sqs_configuration, db_configuration=db_configuration,aws_configuration=aws_configuration)
     etl.process(int(number_of_events))
@@ -29,6 +34,9 @@ def load_events():
 
 @app.route('/get-records')
 def get_records():
+    '''
+    Endpoint to fetch records from the database
+    '''
     with get_db_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM user_logins;")
@@ -38,6 +46,9 @@ def get_records():
 
 @app.route('/get-unmasked-records')
 def get_unmasked_records():
+    '''
+    Endpoint to fetch and decrypt the masked records from the database
+    '''
     print("unmasked")
     with get_db_connection() as conn:
         with conn.cursor() as cur:
