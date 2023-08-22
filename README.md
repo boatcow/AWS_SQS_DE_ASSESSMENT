@@ -1,4 +1,4 @@
-# Platform for Amazon SNS Events Visualization
+# Platform for Amazon SQS Events Visualization
 
 This platform is designed to consume Amazon SNS Events, facilitating their storage and visualization.
 
