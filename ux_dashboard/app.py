@@ -22,9 +22,6 @@ def get_db_connection():
 @app.route('/load-events', methods=['POST'])
 def load_events():
     number_of_events = request.json.get('number_of_events')
-    print("number_of_events: ",number_of_events)
-    # Here, you would write your code to load events to the database
-    # After successfully loading the events:
     etl = ETL(sqs_configuration= sqs_configuration, db_configuration=db_configuration,aws_configuration=aws_configuration)
     etl.process(int(number_of_events))
     etl.close()

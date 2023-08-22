@@ -86,7 +86,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
+function toggleDivVisibility() {
+    console.log("toggleDivVisibility");
+    const div = document.getElementById("instructions");
+    if (div.classList.contains("shrink")) {
+        div.classList.remove("shrink");
+    } else {
+        div.classList.add("shrink");
+    }
+}
 
 async function sendEventCount() {
     console.log("sendEventCount clicked");
@@ -129,4 +137,5 @@ async function sendEventCount() {
     }, 0);  // display the success message after 1 second for demonstration
     
     }
+    
 }
