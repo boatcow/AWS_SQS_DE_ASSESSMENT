@@ -2,7 +2,12 @@
 
 This platform is designed to consume Amazon SNS Events, facilitating their storage and visualization.
 
-**[Live Demo](https://fetch-rewards-siddarth-sairaj.netlify.app/)**
+**[Check out the website in production](https://fetch-rewards-siddarth-sairaj.netlify.app/)**
+
+## Current Architecture
+
+![arch drawio](https://github.com/boatcow/AWS_SQS_DE_ASSESSMENT/assets/40225095/d05306b7-883d-4f2e-a37d-d8e47d382ddb)
+
 
 ## Features
 
@@ -45,6 +50,11 @@ docker-compose up
 
 **Step 3**: 
 Navigate to `localhost:8080` on your preferred browser to access and utilize the platform.
+
+## Next Steps
+Modify the system to a more Scalable Architecture with custom DNS, Similar to one below
+![arch drawio (1)](https://github.com/boatcow/AWS_SQS_DE_ASSESSMENT/assets/40225095/0f4488c9-ee21-4610-bf18-f0dd89f6eca0)
+
 
 ---
 
