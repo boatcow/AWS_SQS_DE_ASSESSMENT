@@ -8,6 +8,9 @@ This platform is designed to consume Amazon SNS Events, facilitating their stora
 
 ![arch drawio](https://github.com/boatcow/AWS_SQS_DE_ASSESSMENT/assets/40225095/d05306b7-883d-4f2e-a37d-d8e47d382ddb)
 
+## Code Structure
+<img width="800" alt="Screen Shot 2023-08-22 at 11 08 40 AM" src="https://github.com/boatcow/AWS_SQS_DE_ASSESSMENT/assets/40225095/3e8b8eb8-b0a4-4ecb-b9e2-407bde27407a">
+
 
 ## Features
 
